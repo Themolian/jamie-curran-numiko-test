@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  --brand-bg: #090b1a;
+  --brand-primary: #1b1938;
+  --brand-highlight: #aa5cdb;
+  --font-primary: "Inter", Helvetica, sans-serif;
+}
+body {
+  background-color: var(--brand-bg);
+  font-family: var(--font-primary);
+}
+
+.site-wrap {
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+h2,
+h3 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.9rem;
+  line-height: 2.2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.highlight {
+  color: var(--brand-highlight);
+}
+
+.card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--brand-primary);
+  border-radius: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 40px 30px;
+  color: white;
+}
+
+.card-body__wrap > p {
+  margin-top: 20px;
+  line-height: 1.5rem;
+}
+
+.card-body p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.card-counters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.card-counters p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+}
+
+.card-counter:not(:first-child) {
+  margin-top: 35px;
+}
+
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+    text-align: left;
+    max-height: 450px;
+  }
+  .card-body {
+    order: 1;
+    width: 50%;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-body__wrap {
+    max-width: 380px;
+  }
+  .card-image {
+    order: 2;
+    width: 50%;
+  }
+  .card-counters {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-counter:not(:first-child) {
+    margin-top: 0;
+  }
+}
